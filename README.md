@@ -12,6 +12,44 @@ A traditional template-based extraction system would require separate rules for 
 
 This project uses a vision-capable LLM to understand the invoice semantically and map the extracted information into a predefined response structure.
 
+Core workflow:-
+
+              Invoice PDF / Image
+                        │
+                        ▼
+                 FastAPI Upload
+                        │
+                        ▼
+               Document Processing
+                        │
+              ┌─────────┴─────────┐
+              │                   │
+            PDF                 Image
+              │                   │
+              ▼                   │
+          PyMuPDF                 │
+        PDF → Images              │
+              │                   │
+              └─────────┬─────────┘
+                        ▼
+                 Gemini Vision
+                        │
+                        ▼
+              Invoice Understanding
+                        │
+                        ▼
+              Semantic Field Mapping
+                        │
+                        ▼
+                Pydantic Validation
+                        │
+                        ▼
+          Business Validation / Calculation
+                        │
+                        ▼
+              Structured JSON Response
+
+              
 Features
 
 - PDF invoice processing
