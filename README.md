@@ -34,12 +34,9 @@ Features
 
 Technology Stack
 
-| Technology | Purpose |
-
-| Python 3.11   | Application development |
-| FastAPI       | REST API framework |
-| Google Gemini | AI-powered invoice understanding |
-| PyMuPDF       | PDF rendering and page conversion |
-| Pillow        | Image processing |
-| Pydantic      | Data modelling and validation |
-
+| Python 3.11
+| FastAPI  
+| Google Gemini 
+| PyMuPDF  
+| Pillow
+| Pydantic   
