@@ -78,3 +78,34 @@ Technology Stack
 | PyMuPDF  
 | Pillow
 | Pydantic   
+
+
+Installation
+------------
+1. Clone the repository
+2. Create a virtual environment
+python3 -m venv venv
+
+Activate it:
+macOS/Linux :source venv/bin/activate
+Windows :venv\Scripts\activate
+
+3. Install dependencies
+pip install -r requirements.txt
+
+Configuration
+-------------
+Create a .env file in the project root:
+GEMINI_API_KEY=your_gemini_api_key
+
+A .env.example file should contain only:
+
+GEMINI_API_KEY=your_gemini_api_key
+
+Running the Application
+-----------------------
+Start the FastAPI server:
+uvicorn app.main:app --reload
+ 
+The API will be available at:
+http://127.0.0.1:8000/docs
